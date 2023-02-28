@@ -38,3 +38,4 @@ In addition, we also developed latitude and longitude variables to account for s
 
 Finally, we generated three new variables, namely 'emission before a year', 'emission before 35 days', and 'emission before 63 days', due to their high correlation with the current emission data. By incorporating data from these timeframes, we were able to gain a more comprehensive understanding of the underlying patterns and relationships within the data.
 
+## Modeling

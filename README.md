@@ -57,5 +57,18 @@ Finally, we conducted cross-validation using rolling window techniques to accoun
 - BART : Poseterior interpretation by feature importance and PDP
 
 4. Ensemble
+
 We chose the ensemble ratio based on its RMSE from March to June.
 
+## Policy proposal
+1. Present condition management : Detecting outliers
+- There were a significant number of missing data points and outliers in our dataset. By detecting and managing these issues effectively, we could improve the overall quality of our data and ensure more accurate modeling and analysis.
+- We implemented this feature for our workers using a one-click system, and have already verified that it is functioning properly.
+
+2. Proactive management : Policies for delivery and supermarket
+- It was essential to propose a policy related to the timing of food purchases.
+- We have checked there was significant causal effect between delivery / supermarket variables and the amount of food waste. For this reason, we presented two policies in terms of delivery and supermarket.
+- In addition, we proposed a DID (Difference in Differences) design, which can effectively identify the causal effects of policy changes.
+
+3. Post management : Introduction of food waste reduction machines
+- Based on the results of our data analysis, we were able to determine the optimal locations for installing the food waste reduction machines.

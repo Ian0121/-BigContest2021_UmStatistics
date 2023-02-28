@@ -17,3 +17,12 @@ This is the 1st prize in 2021 Big Contest Data Analysis ECO JEJU.
 In certain cities, we encountered missing data that occurred 1) consecutively over multiple days, 2) in a recurring pattern, and 3) across several observation points. Additionally, we observed that this pattern of missing data was similar to that of the adjacent cities. Upon further investigation, we were able to trace the cause of this missing data to a news article, which reported that it was due to equipment replacement in Seogwipo-si and supply expansion in Jeju-si.
 
 ![preprocess](https://user-images.githubusercontent.com/122112150/221745455-dc70b284-a119-43f5-93c0-9de12b89b998.png)
+
+2. Handling missing data and outliers
+There were several techniques available to interpolate the missing data and outliers, including linear interpolation, spline interpolation, exponential smoothing, Kalman filtering, and others. However, instead of utilizing these techniques, we opted to estimate the pattern using harmonic regression based on the seasonality of a week, half a year, and a full year, and subsequently generated the data accordingly.
+
+3. Identifying the relationship between different variables
+We recognized that solely considering the correlation between different variables could potentially overlook their true relationship, especially given our understanding that a causal relationship must exist, given that the data were in the form of time series. As such, we took a two-pronged approach to identifying the causal mechanism between the variables.
+
+Firstly, we utilized Bayesian network modeling to generate a graph that would help us identify the causal relationships between the variables. Secondly, we employed the Granger causality test to account for the time series nature of the data. By adjusting for potential confounding variables, we were able to accurately identify the true relationship between the variables.
+

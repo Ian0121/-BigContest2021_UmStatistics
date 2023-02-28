@@ -49,12 +49,12 @@ Additionally, we incorporated spatial and time series correlation into our model
 Finally, we conducted cross-validation using rolling window techniques to account for the time-series nature of the data and ensure that our models were robust and effective in predicting food waste amounts.
 
 2. Monthly modeling
-+ ARIMA : A model considering time series correlation
-+ GWR : A model considering spatial correlation
+- ARIMA : A model considering time series correlation
+- GWR : A model considering spatial correlation
 
 3. Daily modeling
-+ LightGBM : Posterior interpretation by SHAP
-+ BART : Poseterior interpretation by feature importance and PDP
+- LightGBM : Posterior interpretation by SHAP
+- BART : Poseterior interpretation by feature importance and PDP
 
 4. Ensemble
 We chose the ensemble ratio based on its RMSE from March to June.

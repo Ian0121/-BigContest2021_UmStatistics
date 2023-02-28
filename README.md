@@ -2,7 +2,7 @@
 
 This is the 1st prize in 2021 Big Contest Data Analysis ECO JEJU.
 + Aim
-  + To make a prediction on the quantity of food waste that will be generated in Jeju for the months of July and August
+  + To make a prediction on the quantity of food waste that will be generated in Jeju for the months of July and August in 2021
   + Put forth various policies aimed at reducing the amount of food waste in Jeju
 + Team Name : UmStatistics
 + Team member : Kwon Namtaek, Oh Jungmin, Yu Gyeongmin, and Lee Sanghyun

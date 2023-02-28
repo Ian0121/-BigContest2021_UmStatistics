@@ -22,9 +22,19 @@ In certain cities, we encountered missing data that occurred 1) consecutively ov
 
 There were several techniques available to interpolate the missing data and outliers, including linear interpolation, spline interpolation, exponential smoothing, Kalman filtering, and others. However, instead of utilizing these techniques, we opted to estimate the pattern using harmonic regression based on the seasonality of a week, half a year, and a full year, and subsequently generated the data accordingly.
 
+
 3. Identifying the relationship between different variables
 
 We recognized that solely considering the correlation between different variables could potentially overlook their true relationship, especially given our understanding that a causal relationship must exist, given that the data were in the form of time series. As such, we took a two-pronged approach to identifying the causal mechanism between the variables.
 
 Firstly, we utilized Bayesian network modeling to generate a graph that would help us identify the causal relationships between the variables. Secondly, we employed the Granger causality test to account for the time series nature of the data. By adjusting for potential confounding variables, we were able to accurately identify the true relationship between the variables.
+
+
+4. Creating several derived variables
+
+To account for seasonality within the data, we generated additional variables using sine and cosine functions. These variables were specifically designed to capture the cyclical patterns observed in the data over time, thereby enabling us to gain a better understanding of the seasonal effects on the variables of interest.
+
+In addition, we also developed latitude and longitude variables to account for spatial data. These variables allowed us to incorporate the location-specific aspects of the data into our analysis, thereby providing a more nuanced understanding of the relationships between the variables.
+
+Finally, we generated three new variables, namely 'emission before a year', 'emission before 35 days', and 'emission before 63 days', due to their high correlation with the current emission data. By incorporating data from these timeframes, we were able to gain a more comprehensive understanding of the underlying patterns and relationships within the data.
 

@@ -39,3 +39,23 @@ In addition, we also developed latitude and longitude variables to account for s
 Finally, we generated three new variables, namely 'emission before a year', 'emission before 35 days', and 'emission before 63 days', due to their high correlation with the current emission data. By incorporating data from these timeframes, we were able to gain a more comprehensive understanding of the underlying patterns and relationships within the data.
 
 ## Modeling
+![modeling](https://user-images.githubusercontent.com/122112150/221774769-36ac7476-ea43-410b-a956-b2139fc099f7.png)
+1. Goal of our modeling
+
+Initially, our primary objective was to develop a model that accurately predicted the amount of food waste for not only July and August, but also for other months as well. In order to achieve this goal, we utilized explainable models that allowed us to gain insights from the modeling results and present them in a clear and concise manner.
+
+Additionally, we incorporated spatial and time series correlation into our model in order to better understand the underlying patterns and relationships within the data. To maximize predictability, we divided our models into two types: one that predicted the amount of food waste one month later and another that predicted it two months later.
+
+Finally, we conducted cross-validation using rolling window techniques to account for the time-series nature of the data and ensure that our models were robust and effective in predicting food waste amounts.
+
+2. Monthly modeling
++ ARIMA : A model considering time series correlation
++ GWR : A model considering spatial correlation
+
+3. Daily modeling
++ LightGBM : Posterior interpretation by SHAP
++ BART : Poseterior interpretation by feature importance and PDP
+
+4. Ensemble
+We chose the ensemble ratio based on its RMSE from March to June.
+
